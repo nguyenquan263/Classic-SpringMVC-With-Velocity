@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Quan's To-do Application</title>
+    <link rel="stylesheet" type="text/css" href="$request.contextPath/resources/css/style.css" />
+</head>
+<body>
+    <header>
+        <h1>My Todo Application</h1>
+        <nav>
+            <ul>
+                <li><a href="$request.contextPath/">Home</a></li>
+                <li><a href="$request.contextPath/todos">To-do List</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content">
+        $screen_content
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Todo Application</p>
+    </footer>
+</body>
+</html>

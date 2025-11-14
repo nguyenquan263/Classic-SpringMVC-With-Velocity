@@ -7,13 +7,7 @@
 </head>
 <body>
     <header>
-        <h1>My Todo Application</h1>
-        <nav>
-            <ul>
-                <li><a href="$request.contextPath/">Home</a></li>
-                <li><a href="$request.contextPath/todos">To-do List</a></li>
-            </ul>
-        </nav>
+        <h1>My Count Down Application</h1>
     </header>
 
     <div id="content">
@@ -21,7 +15,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 My Todo Application</p>
+        <p>&copy; 2025 My Application</p>
     </footer>
 </body>
 </html>

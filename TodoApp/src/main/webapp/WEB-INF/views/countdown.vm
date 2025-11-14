@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Countdown</title>
+    <style>
+        body { font-family: Arial; text-align:center; margin-top:50px; }
+        #countdown { font-size: 40px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<h1>Countdown to December 13, 2025 - 12:30 PM</h1>
+
+#if($finished)
+    <h2>The time has arrived!</h2>
+#else
+    <div id="countdown">
+        $days days $hours hours $minutes minutes $seconds seconds
+    </div>
+#end
+
+
+<script>
+#if(!$finished)
+    // Initial values calculated by Java
+    let days = $days;
+    let hours = $hours;
+    let minutes = $minutes;
+    let seconds = $seconds;
+
+    function tick() {
+        // Decrease by 1 second
+        seconds--;
+
+        if (seconds < 0) {
+            seconds = 59;
+            minutes--;
+        }
+
+        if (minutes < 0) {
+            minutes = 59;
+            hours--;
+        }
+
+        if (hours < 0) {
+            hours = 23;
+            days--;
+        }
+
+        if (days < 0) {
+            document.getElementById("countdown").innerHTML = "The time has arrived!";
+            return;
+        }
+
+        document.getElementById("countdown").innerHTML =
+            days + " days "
+            + hours + " hours "
+            + minutes + " minutes "
+            + seconds + " seconds";
+    }
+
+    setInterval(tick, 1000);
+#end
+</script>
+
+</body>
+</html>

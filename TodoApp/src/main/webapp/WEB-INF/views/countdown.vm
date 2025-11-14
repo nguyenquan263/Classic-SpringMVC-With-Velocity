@@ -59,7 +59,6 @@
             + minutes + " minutes "
             + seconds + " seconds";
     }
-
     setInterval(tick, 1000);
 #end
 </script>
